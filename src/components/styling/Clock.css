@@ -1,0 +1,104 @@
+.timeInformation {
+  color: white;
+  font-family: Mononten;
+  height: 80px;
+  width: 80px;
+  margin-bottom: 2%;
+  -webkit-transform: scale(0.5);
+  -moz-transform: scale(0.5);
+  -ms-transform: scale(0.5);
+  transform: scale(0.5);
+
+  position: absolute;
+  bottom: 98%;
+  margin-left: 35.5%;
+}
+
+#hour {
+  font-size: 20em;
+  position: relative;
+}
+
+#min {
+  font-size: 10em;
+  position: relative;
+  left: 290px;
+  bottom: 510px;
+}
+
+#sec {
+  font-size: 6.5em;
+  position: relative;
+  left: 295px;
+  bottom: 635px;
+}
+
+#periodOfDay {
+  font-size: 2.8em;
+  position: relative;
+  bottom: 800px;
+  left: 390px;
+}
+
+#seperator {
+  width: 10px;
+  height: 160px;
+  background-color: white;
+  border-radius: 10px;
+  position: relative;
+
+  bottom: 975px;
+  left: 450px;
+}
+
+#day {
+  font-size: 10.5em;
+  position: relative;
+
+  bottom: 1300px;
+  left: 500px;
+}
+
+#month {
+  position: relative;
+  font-size: 6.7em;
+
+  bottom: 1450px;
+  left: 500px;
+}
+
+#date {
+  position: relative;
+  font-size: 3em;
+
+  bottom: 1620px;
+  left: 630px;
+}
+
+#year {
+  position: relative;
+  font-size: 2.3em;
+
+  bottom: 1655px;
+  left: 630px;
+}
+
+#dateEnding {
+  position: relative;
+
+  bottom: 1765px;
+  left: 680px;
+}
+
+#weatherIcon {
+  width: 150px;
+  height: 150px;
+  border-radius: 100px;
+  position: relative;
+
+  bottom: 2000px;
+  left: 590px;
+  z-index: -1;
+
+  background-color: violet;
+}
